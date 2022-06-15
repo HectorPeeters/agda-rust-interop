@@ -1,4 +1,10 @@
+// Needed for curried functions
 #![feature(type_alias_impl_trait)]
+// These are used to disable clippy warnings since the generated Rust code does not follow the rust
+// styling guidelines
+#![allow(non_camel_case_types)]
+#![allow(unreachable_patterns)]
+#![allow(non_snake_case)]
 
 include!(concat!(env!("OUT_DIR"), "/Test.rs"));
 
@@ -25,4 +31,8 @@ fn main() {
     let sum = plus()(number1)(number2);
 
     println!("{:?}", to_native_number(sum));
+
+    let negated_true = not()(ztrue());
+
+    println!("{:?}", negated_true);
 }
