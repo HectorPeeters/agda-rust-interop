@@ -6,6 +6,7 @@
 #![allow(unreachable_patterns)]
 #![allow(non_snake_case)]
 
+// Include the compiled Agda file
 include!(concat!(env!("OUT_DIR"), "/Test.rs"));
 
 fn to_native_number(mut x: Nat) -> u64 {
