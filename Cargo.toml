@@ -1,6 +1,6 @@
 [package]
 name = "agda_rust_interop"
-author = "Hector Peeters"
+authors = ["Hector Peeters"]
 version = "0.1.0"
 edition = "2021"
 
